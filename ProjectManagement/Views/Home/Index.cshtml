@@ -1,0 +1,22 @@
+﻿@model IEnumerable<ProjectManagement.Models.Project>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="~/css/home_index.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        @{
+            foreach (var project in Model)
+            {
+                <div class="project-item">
+                    <p>@project.Name</p>
+                    <button>View</button>
+                </div>
+                
+            }
+        }
+    </div>
+</body>
+</html>
